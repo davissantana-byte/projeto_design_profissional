@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 252 100% 99%;
+    --foreground: 258 15% 15%;
+
+    --card: 252 100% 98%;
+    --card-foreground: 258 15% 15%;
+
+    --popover: 252 100% 98%;
+    --popover-foreground: 258 15% 15%;
+
+    --primary: 280 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 30% 95%;
+    --secondary-foreground: 280 50% 25%;
+
+    --muted: 280 20% 94%;
+    --muted-foreground: 280 15% 45%;
+
+    --accent: 315 100% 85%;
+    --accent-foreground: 315 80% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 48 96% 53%;
+    --warning-foreground: 0 0% 100%;
+
+    --emergency: 350 89% 60%;
+    --emergency-foreground: 0 0% 100%;
+
+    --border: 280 20% 88%;
+    --input: 280 20% 88%;
+    --ring: 280 100% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 258 25% 8%;
+    --foreground: 252 100% 98%;
+
+    --card: 258 25% 10%;
+    --card-foreground: 252 100% 98%;
+
+    --popover: 258 25% 10%;
+    --popover-foreground: 252 100% 98%;
+
+    --primary: 280 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 25% 15%;
+    --secondary-foreground: 280 30% 85%;
+
+    --muted: 280 25% 15%;
+    --muted-foreground: 280 20% 65%;
+
+    --accent: 315 80% 25%;
+    --accent-foreground: 315 100% 85%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 48 96% 53%;
+    --warning-foreground: 0 0% 100%;
+
+    --emergency: 350 89% 60%;
+    --emergency-foreground: 0 0% 100%;
+
+    --border: 280 25% 20%;
+    --input: 280 25% 20%;
+    --ring: 280 100% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Safe area support for mobile devices */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Touch improvements for mobile */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Improve text readability on mobile */
+  @media (max-width: 640px) {
+    body {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+  }
+}
