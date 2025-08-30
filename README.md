@@ -73,6 +73,7 @@ npm run dev
 O projeto abrirá no navegador em http://localhost:5173 (ou similar).
 
 📂 Estrutura do Projeto
+
 projeto_design_profissional-main/
 │── back_end/              # API em Node.js
 │   └── app-backend/
@@ -174,6 +175,7 @@ npm run dev
 O projeto abrirá no navegador em http://localhost:5173 (ou similar).
 
 📂 Estrutura do Projeto
+
 projeto_design_profissional-main/
 │── back_end/              # API em Node.js
 │   └── app-backend/
